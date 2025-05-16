@@ -1,4 +1,4 @@
-package com.ad17yakr.prompt2deck.pptgenerator.dto;
+package com.ad17yakr.prompt2deck.geminiwrapper.dto;
 
 import lombok.Getter;
 import lombok.Setter;

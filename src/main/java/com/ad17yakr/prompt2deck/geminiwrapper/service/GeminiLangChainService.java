@@ -1,4 +1,4 @@
-package com.ad17yakr.prompt2deck.geminiwrapper;
+package com.ad17yakr.prompt2deck.geminiwrapper.service;
 
 import dev.langchain4j.data.message.UserMessage;
 import dev.langchain4j.model.chat.ChatModel;

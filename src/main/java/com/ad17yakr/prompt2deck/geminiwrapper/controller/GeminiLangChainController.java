@@ -1,6 +1,7 @@
-package com.ad17yakr.prompt2deck.geminiwrapper;
+package com.ad17yakr.prompt2deck.geminiwrapper.controller;
 
-import com.ad17yakr.prompt2deck.pptgenerator.dto.DeckContentGeneratorPromptDTO;
+import com.ad17yakr.prompt2deck.geminiwrapper.service.GeminiLangChainService;
+import com.ad17yakr.prompt2deck.geminiwrapper.dto.DeckContentGeneratorPromptDTO;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;

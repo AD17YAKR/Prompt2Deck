@@ -1,6 +1,5 @@
 package com.ad17yakr.prompt2deck.geminiwrapper;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.langchain4j.data.message.UserMessage;
 import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.model.chat.request.ChatRequest;
@@ -11,14 +10,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.time.Duration;
-import java.util.Map;
 
 @Service
-public class GeminiLangchainService {
+public class GeminiLangChainService {
     private final ChatModel gemini;
-    private final ObjectMapper objectMapper;
 
-    public GeminiLangchainService(@Value("${gemini.api.key}") String apiKey, @Value("${gemini.api.model}") String apiModel) {
+    public GeminiLangChainService(@Value("${gemini.api.key}") String apiKey, @Value("${gemini.api.model}") String apiModel) {
 
         gemini = GoogleAiGeminiChatModel
                 .builder()
@@ -32,7 +29,6 @@ public class GeminiLangchainService {
                 .responseFormat(ResponseFormat.JSON)
                 .allowCodeExecution(false)
                 .build();
-        this.objectMapper = new ObjectMapper();
     }
 
     public String generateResponseAsJson(String prompt) {
